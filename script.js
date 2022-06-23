@@ -10,4 +10,26 @@ function makeGrid(rows, cols) {
     };
 };
 
-makeGrid(16, 16);
+makeGrid(16, 16); //create grid
+
+// add hover effect on each grid cell to colour when hovering
+let gridItems = document.getElementsByClassName('grid-item');
+
+let colourCell = function(elem) {
+    elem.target.style.background = 'black';
+};
+
+for (let i = 0; i < gridItems.length; i++) {
+    gridItems[i].addEventListener('mouseover', colourCell);
+}
+
+//add resetButton functionality
+let resetBoard = function() {
+    let gridItems = document.getElementsByClassName('grid-item');
+    for(let i = 0; i < gridItems.length; i++) {
+        gridItems[i].style.background = 'white';
+    }
+}
+const resetBtn = document.getElementById('reset-btn');
+resetBtn.addEventListener('click', resetBoard);
+

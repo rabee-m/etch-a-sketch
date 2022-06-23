@@ -20,6 +20,13 @@ body {
 .game-display {
     display: flex;
     flex: 1;
+    gap: 20px;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #grid-container {
@@ -27,6 +34,7 @@ body {
     grid-template-rows: repeat(var(--grid-rows), 35px);
     grid-template-columns: repeat(var(--grid-cols), 35px);
 }
+
 .grid-item {
     border: 1px solid black;
     margin : 0;
