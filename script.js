@@ -26,7 +26,7 @@ function makeGrid(rows, cols) {
 }
 };
 
-makeGrid(16, 16); //create grid
+makeGrid(5, 5); //create grid
 
 //add resetButton functionality
 let resetBoard = function() {
@@ -41,9 +41,9 @@ resetBtn.addEventListener('click', resetBoard);
 //add change size button functionality
 const sizeBtn = document.getElementById('size-btn');
 sizeBtn.addEventListener('click', ()=> {
-    let sizePrompt = prompt("Enter what size square grid you would like. (Max 50 x 50 grid)");
-    if (sizePrompt > 50 || sizePrompt < 0) {
-        alert('Invalid Size, must be in range 0-50!');
+    let sizePrompt = prompt("Enter what size square grid you would like. (Max 20 x 20 grid)");
+    if (sizePrompt > 20 || sizePrompt < 0) {
+        alert('Invalid Size, must be in range 0-20!');
 
     } else {
         destroyGrid();
