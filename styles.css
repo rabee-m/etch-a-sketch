@@ -103,3 +103,44 @@ button:not([disabled]):active {
     padding: 12px 50px;
   }
 }
+
+
+
+
+button,
+input[type='color'] {
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+input[type='color']:hover {
+  transform: scale(1.05);
+}
+
+input[type='color']:active {
+  transition: transform 0.05s ease-in-out;
+  transform: scale(1);
+}
+
+input[type='color'] {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 80px;
+  border: none;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
